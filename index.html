@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomodoroBlocks - Optimisez votre productivité</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>PomodoroBlocks</h1>
+    <p class="tagline">Planifiez vos sessions de travail et maximisez votre concentration</p>
+  </header>
+  
+  <main>
+    <section class="timer-container">
+      <div class="timer-display">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+      </div>
+      
+      <div class="timer-controls">
+        <button id="start-btn" class="btn primary">Démarrer</button>
+        <button id="pause-btn" class="btn secondary" disabled>Pause</button>
+        <button id="reset-btn" class="btn secondary">Réinitialiser</button>
+      </div>
+      
+      <div class="timer-mode">
+        <button id="pomodoro-btn" class="mode-btn active">Pomodoro</button>
+        <button id="short-break-btn" class="mode-btn">Pause courte</button>
+        <button id="long-break-btn" class="mode-btn">Pause longue</button>
+      </div>
+    </section>
+    
+    <section class="blocks-container">
+      <h2>Planificateur de blocs</h2>
+      <div class="block-form">
+        <input type="text" id="block-name" placeholder="Nom de la tâche">
+        <input type="number" id="block-duration" min="5" max="120" value="25" placeholder="Durée (min)">
+        <button id="add-block-btn" class="btn primary">Ajouter</button>
+      </div>
+      
+      <div class="blocks-list">
+        <h3>Vos blocs de travail</h3>
+        <ul id="blocks"></ul>
+        <p id="empty-blocks-message">Aucun bloc planifié. Ajoutez votre première tâche !</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>PomodoroBlocks - Boostez votre productivité avec la méthode Pomodoro</p>
+  </footer>
+</body>
+</html>
